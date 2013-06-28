@@ -1,6 +1,7 @@
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/jquery'
+        jquery: '../bower_components/jquery/jquery',
+        async: '../bower_components/requirejs-plugins/src/async'
     },
     shim: {
         bootstrap: {
@@ -27,6 +28,9 @@ require([], function () {
     }
     if(url.indexOf('speakers.html') > 0) {
         require(['speakers'], function() {});
+    }
+    if(url.indexOf('map.html') > 0) {
+        require(['map'], function() {});
     }
 });
 
